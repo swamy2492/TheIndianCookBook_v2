@@ -115,7 +115,7 @@ Devise.setup do |config|
   # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).
   config.stretches = Rails.env.test? ? 1 : 11
 
-  config.secret_key = ENV['c69e33047f6f99a929bee8bcc86f7b00854f17d8e357126e322b580d59fc31b22d725c87c9dd94705ac3a6f3ff3fb682509294bfcb982a4e9316357c01529029'] if Rails.env.production?
+  config.secret_key = ENV['DEVISE_SECRET_KEY'] if Rails.env.production?
   # Set up a pepper to generate the hashed password.
   # config.pepper = 'a15dd5548f280760214d5eb22f9c37142373bba31e77fa5492ae0a08d68062e16d2c3addc0c301ca1b01879678594a767bc51b0bc7556e043e65985b66dfe4ff'
 
@@ -156,7 +156,7 @@ Devise.setup do |config|
 
   # Invalidates all the remember me tokens when the user signs out.
   config.expire_all_remember_me_on_sign_out = true
-  
+
   # If true, extends the user's remember period when remembered via cookie.
   # config.extend_remember_period = false
 
