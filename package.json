@@ -2,5 +2,5 @@
   "name": "the_indian_cookbook",
   "private": true,
   "dependencies": {}
+  "engines": { "node": "8.9.4" }
 }
-{ "engines" : { "node": "8.9.4" } }
